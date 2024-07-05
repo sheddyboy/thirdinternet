@@ -1,113 +1,141 @@
+"use client";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+
 import Image from "next/image";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
+    <main className="container flex flex-col pt-[56px]">
+      <nav className="">
+        <Card className="rounded-full">
+          <CardContent className="flex items-center justify-between px-[20px] py-[12px]">
+            <Image src="/logo.svg" alt="" width={195} height={36} />
+            <div className="relative flex items-center">
+              <Image
+                className="absolute left-[0.75vw]"
+                src="/search.svg"
+                alt=""
+                width={16}
+                height={16}
+              />
+              <Input
+                placeholder="Search for book"
+                className="h-[46px] w-[20vw] rounded-full border-0 bg-white/[0.04] pl-[2vw] text-xsm font-normal outline-none placeholder:text-[#E8E8E8]"
+              />
+            </div>
+            <Card className="rounded-full">
+              <CardContent className="px-[13px] py-[8px]">
+                <Button className="h-[40px] rounded-full px-[20px]">
+                  Login
+                </Button>
+              </CardContent>
+            </Card>
+          </CardContent>
+        </Card>
+      </nav>
+      <ToggleGroup
+        type="single"
+        defaultValue="All"
+        className="sticky top-0 gap-[60px] bg-background pb-[40px] pt-[27px]"
+      >
+        <ToggleGroupItem
+          className="rounded-full border-2 border-transparent px-[20px] py-[10px] text-white data-[state=on]:border-[#6c6c6c] data-[state=on]:bg-card/[0.17] data-[state=on]:text-white"
+          value="All"
+        >
+          All
+        </ToggleGroupItem>
+        <ToggleGroupItem
+          className="rounded-full border-2 border-transparent px-[20px] py-[10px] text-white data-[state=on]:border-[#6c6c6c] data-[state=on]:bg-card/[0.17] data-[state=on]:text-white"
+          value="Mathematics"
+        >
+          Mathematics
+        </ToggleGroupItem>
+        <ToggleGroupItem
+          className="rounded-full border-2 border-transparent px-[20px] py-[10px] text-white data-[state=on]:border-[#6c6c6c] data-[state=on]:bg-card/[0.17] data-[state=on]:text-white"
+          value="Science"
+        >
+          Science
+        </ToggleGroupItem>
+        <ToggleGroupItem
+          className="rounded-full border-2 border-transparent px-[20px] py-[10px] text-white data-[state=on]:border-[#6c6c6c] data-[state=on]:bg-card/[0.17] data-[state=on]:text-white"
+          value="language"
+        >
+          language
+        </ToggleGroupItem>
+        <ToggleGroupItem
+          className="rounded-full border-2 border-transparent px-[20px] py-[10px] text-white data-[state=on]:border-[#6c6c6c] data-[state=on]:bg-card/[0.17] data-[state=on]:text-white"
+          value="Technology"
+        >
+          Technology
+        </ToggleGroupItem>
+        <ToggleGroupItem
+          className="rounded-full border-2 border-transparent px-[20px] py-[10px] text-white data-[state=on]:border-[#6c6c6c] data-[state=on]:bg-card/[0.17] data-[state=on]:text-white"
+          value="History"
+        >
+          History
+        </ToggleGroupItem>
+        <ToggleGroupItem
+          className="rounded-full border-2 border-transparent px-[20px] py-[10px] text-white data-[state=on]:border-[#6c6c6c] data-[state=on]:bg-card/[0.17] data-[state=on]:text-white"
+          value="Art & commercials"
+        >
+          Art & commercials
+        </ToggleGroupItem>
+      </ToggleGroup>
+      <div className="mb-[114px] grid grid-cols-3 gap-[10px]">
+        {Array.from({ length: 9 }).map((_, index) => (
+          <Card className="cursor-pointer rounded-[13px]" key={index}>
+            <CardContent className="flex flex-col gap-[10px] px-[10px] pb-[25px] pt-[10px]">
+              <Image
+                key={index}
+                alt=""
+                src="/frog-image.png"
+                width={379}
+                height={366}
+                className="w-full rounded-[10px]"
+              />
+              <div className="flex flex-col gap-[17px]">
+                <span className="text-xlg">Science Shepherd Biology</span>
+                <span className="text-md text-[#CBC4C4]">Science</span>
+                <span className="text-lg">Read by 278 people</span>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+      <footer className="mx-auto flex flex-col justify-center gap-[26px] pb-[113px] text-center">
+        <Image
+          alt=""
+          src="/footer-logo.svg"
+          className="mx-auto"
+          width={192}
+          height={36}
+        />
+        <span>Bringing the younger next generation onchain</span>
+        <div className="mx-auto flex items-center gap-[36px]">
+          <Image src="/facebook-1.svg" alt="" width={40} height={40} />
+          <Image src="/twitter-1.svg" alt="" width={40} height={40} />
+          <Image src="/insta-1.svg" alt="" width={40} height={40} />
+        </div>
+        <span>
+          All Rights Reserved © 2023 <strong>Thirdinternet</strong>
+        </span>
+        <div className="mx-auto flex items-center">
+          <span className="text-lg font-bold">Contact us </span>
+          <a href="mailto:support@thirdinternet.com">
+            support@thirdinternet.com
           </a>
         </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      </footer>
     </main>
   );
 }
