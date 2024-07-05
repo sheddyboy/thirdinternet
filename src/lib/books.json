@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Organic Chemistry Notebook",
+    "author": "John Doe",
+    "description": "A comprehensive guide to organic chemistry.",
+    "publishedDate": "2023-01-01",
+    "pdfUrl": "http://example.com/organic-chemistry.pdf",
+    "category": "Science",
+    "readCount": 2000,
+    "thumbnail": "http://example.com/thumbnails/organic-chemistry.jpg"
+  },
+  {
+    "name": "Math Geek",
+    "author": "Jane Smith",
+    "description": "Guide to the nerdiest math facts, theorems, and equations.",
+    "publishedDate": "2022-06-01",
+    "pdfUrl": "http://example.com/math-geek.pdf",
+    "category": "Mathematics",
+    "readCount": 2000,
+    "thumbnail": "http://example.com/thumbnails/math-geek.jpg"
+  },
+  {
+    "name": "Biology Basics",
+    "author": "Alice Johnson",
+    "description": "An introduction to the fundamental concepts of biology.",
+    "publishedDate": "2021-03-15",
+    "pdfUrl": "http://example.com/biology-basics.pdf",
+    "category": "Science",
+    "readCount": 1500,
+    "thumbnail": "http://example.com/thumbnails/biology-basics.jpg"
+  },
+  {
+    "name": "Physics for Beginners",
+    "author": "Bob Brown",
+    "description": "A beginner's guide to the principles of physics.",
+    "publishedDate": "2020-11-22",
+    "pdfUrl": "http://example.com/physics-beginners.pdf",
+    "category": "Science",
+    "readCount": 1800,
+    "thumbnail": "http://example.com/thumbnails/physics-beginners.jpg"
+  },
+  {
+    "name": "Advanced Calculus",
+    "author": "Charles Davis",
+    "description": "An in-depth exploration of advanced calculus topics.",
+    "publishedDate": "2019-05-30",
+    "pdfUrl": "http://example.com/advanced-calculus.pdf",
+    "category": "Mathematics",
+    "readCount": 2200,
+    "thumbnail": "http://example.com/thumbnails/advanced-calculus.jpg"
+  },
+  {
+    "name": "Computer Science Fundamentals",
+    "author": "Diana Evans",
+    "description": "Basic concepts and principles of computer science.",
+    "publishedDate": "2022-08-14",
+    "pdfUrl": "http://example.com/cs-fundamentals.pdf",
+    "category": "Technology",
+    "readCount": 2500,
+    "thumbnail": "http://example.com/thumbnails/cs-fundamentals.jpg"
+  },
+  {
+    "name": "History of Ancient Civilizations",
+    "author": "Eleanor Green",
+    "description": "A look into the history of ancient civilizations.",
+    "publishedDate": "2021-12-01",
+    "pdfUrl": "http://example.com/ancient-civilizations.pdf",
+    "category": "History",
+    "readCount": 1700,
+    "thumbnail": "http://example.com/thumbnails/ancient-civilizations.jpg"
+  },
+  {
+    "name": "Linguistics 101",
+    "author": "Frank Harris",
+    "description": "Introduction to the study of linguistics.",
+    "publishedDate": "2020-04-10",
+    "pdfUrl": "http://example.com/linguistics-101.pdf",
+    "category": "Language",
+    "readCount": 1300,
+    "thumbnail": "http://example.com/thumbnails/linguistics-101.jpg"
+  },
+  {
+    "name": "Data Science Essentials",
+    "author": "Grace Ingram",
+    "description": "Essential concepts and techniques in data science.",
+    "publishedDate": "2023-02-20",
+    "pdfUrl": "http://example.com/data-science-essentials.pdf",
+    "category": "Technology",
+    "readCount": 2100,
+    "thumbnail": "http://example.com/thumbnails/data-science-essentials.jpg"
+  },
+  {
+    "name": "Modern Art Overview",
+    "author": "Henry Jackson",
+    "description": "An overview of modern art movements and artists.",
+    "publishedDate": "2019-09-25",
+    "pdfUrl": "http://example.com/modern-art-overview.pdf",
+    "category": "Art",
+    "readCount": 1400,
+    "thumbnail": "http://example.com/thumbnails/modern-art-overview.jpg"
+  },
+  {
+    "name": "Modern Art Overview 1",
+    "author": "Henry Jackson",
+    "description": "An overview of modern art movements and artists.",
+    "publishedDate": "2019-09-25",
+    "pdfUrl": "http://example.com/modern-art-overview.pdf",
+    "category": "Science",
+    "readCount": 1400,
+    "thumbnail": "http://example.com/thumbnails/modern-art-overview.jpg"
+  },
+  {
+    "name": "Modern Art Overview 2",
+    "author": "Henry Jackson",
+    "description": "An overview of modern art movements and artists.",
+    "publishedDate": "2019-09-25",
+    "pdfUrl": "http://example.com/modern-art-overview.pdf",
+    "category": "Science",
+    "readCount": 1400,
+    "thumbnail": "http://example.com/thumbnails/modern-art-overview.jpg"
+  }
+]

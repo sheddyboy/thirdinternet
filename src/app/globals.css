@@ -7,7 +7,7 @@
     --background: 0, 0%, 7%;
     --foreground: 0 0% 100%;
 
-    --card: 0 0% 56%;
+    --card: 0 0% 15%;
     --card-foreground: 0 0% 100%;
 
     --popover: 0 0% 100%;
@@ -69,6 +69,10 @@
 @layer base {
   * {
     @apply border-border;
+  }
+  html,
+  body {
+    @apply scroll-smooth;
   }
   body {
     @apply bg-background text-foreground;
