@@ -37,7 +37,7 @@ export default function Home() {
 
   return (
     <main className="container flex flex-col">
-      <nav className="sticky top-0 z-[2] bg-background pt-[56px] max-lg:pt-[47px]">
+      <nav className="sticky top-0 z-[2] bg-background pt-[56px] max-lg:pt-[20px]">
         <Card className="rounded-full bg-background">
           <CardContent className="flex items-center justify-between px-[20px] py-[12px] max-lg:flex-col max-lg:gap-[12px] max-lg:p-0">
             <div className="flex items-center justify-between max-lg:w-full">
@@ -116,14 +116,6 @@ export default function Home() {
                     </SheetClose>
                     <SheetClose>
                       <RadioGroupItem
-                        value="Technology"
-                        className="inline-flex aspect-auto h-10 w-full shrink-0 items-center justify-start rounded-full border-2 border-transparent bg-transparent px-[20px] py-[10px] text-start text-sm font-medium text-white ring-offset-background transition-colors hover:bg-muted hover:text-[#080808] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=checked]:border-[#6c6c6c] data-[state=checked]:bg-card/[0.17] data-[state=checked]:text-white"
-                      >
-                        Technology
-                      </RadioGroupItem>
-                    </SheetClose>
-                    <SheetClose>
-                      <RadioGroupItem
                         value="History"
                         className="inline-flex aspect-auto h-10 w-full shrink-0 items-center justify-start rounded-full border-2 border-transparent bg-transparent px-[20px] py-[10px] text-start text-sm font-medium text-white ring-offset-background transition-colors hover:bg-muted hover:text-[#080808] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=checked]:border-[#6c6c6c] data-[state=checked]:bg-card/[0.17] data-[state=checked]:text-white"
                       >
@@ -132,7 +124,7 @@ export default function Home() {
                     </SheetClose>
                     <SheetClose>
                       <RadioGroupItem
-                        value="artCommercials"
+                        value="Art & commercials"
                         className="inline-flex aspect-auto h-10 w-full shrink-0 items-center justify-start rounded-full border-2 border-transparent bg-transparent px-[20px] py-[10px] text-start text-sm font-medium text-white ring-offset-background transition-colors hover:bg-muted hover:text-[#080808] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=checked]:border-[#6c6c6c] data-[state=checked]:bg-card/[0.17] data-[state=checked]:text-white"
                       >
                         Art & commercials
@@ -297,19 +289,13 @@ export default function Home() {
           Language
         </RadioGroupItem>
         <RadioGroupItem
-          value="Technology"
-          className="inline-flex aspect-auto h-10 w-auto shrink-0 items-center justify-center rounded-full border-2 border-transparent bg-transparent px-[20px] py-[10px] text-sm font-medium text-white ring-offset-background transition-colors hover:bg-muted hover:text-[#080808] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=checked]:border-[#6c6c6c] data-[state=checked]:bg-card/[0.17] data-[state=checked]:text-white"
-        >
-          Technology
-        </RadioGroupItem>
-        <RadioGroupItem
           value="History"
           className="inline-flex aspect-auto h-10 w-auto shrink-0 items-center justify-center rounded-full border-2 border-transparent bg-transparent px-[20px] py-[10px] text-sm font-medium text-white ring-offset-background transition-colors hover:bg-muted hover:text-[#080808] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=checked]:border-[#6c6c6c] data-[state=checked]:bg-card/[0.17] data-[state=checked]:text-white"
         >
           History
         </RadioGroupItem>
         <RadioGroupItem
-          value="artCommercials"
+          value="Art & commercials"
           className="inline-flex aspect-auto h-10 w-auto shrink-0 items-center justify-center rounded-full border-2 border-transparent bg-transparent px-[20px] py-[10px] text-sm font-medium text-white ring-offset-background transition-colors hover:bg-muted hover:text-[#080808] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=checked]:border-[#6c6c6c] data-[state=checked]:bg-card/[0.17] data-[state=checked]:text-white"
         >
           Art & commercials
@@ -317,27 +303,16 @@ export default function Home() {
       </RadioGroup>
       <motion.div
         layout
-        className="mb-[114px] grid grid-cols-3 gap-[10px] max-lg:grid-cols-2 max-sm:grid-cols-1"
+        className="mb-[114px] grid grid-cols-3 gap-[10px] max-lg:grid-cols-2 max-sm:grid-cols-2"
       >
         <AnimatePresence>
           {books.map((book) => (
-            <motion.div
-              layout
-              key={book.name}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-            >
+            <motion.div layout key={book.name} exit={{ opacity: 0 }}>
               <BookCard
-                author={book.author}
                 category={book.category}
-                description={book.description}
                 isAuthenticated={authenticated}
                 name={book.name}
-                pdfUrl={book.pdfUrl}
-                publishedDate={book.publishedDate}
-                readCount={book.readCount}
-                thumbnail={book.thumbnail}
+                pdfUrl={book.link}
               />
             </motion.div>
           ))}

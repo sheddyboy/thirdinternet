@@ -7,32 +7,26 @@ import { usePrivy } from "@privy-io/react-auth";
 
 interface BookCardProps extends React.HTMLAttributes<HTMLDivElement> {
   name: string;
-  author: string;
-  description: string;
-  publishedDate: string;
   pdfUrl: string;
   category: string;
-  readCount: number;
-  thumbnail: string;
+  readCount?: number;
   isAuthenticated: boolean;
 }
 
+export type CategoryType = {
+  [key: string]: string;
+};
+
 const BookCard = forwardRef<HTMLDivElement, BookCardProps>(
-  (
-    {
-      author,
-      isAuthenticated,
-      category,
-      description,
-      name,
-      pdfUrl,
-      publishedDate,
-      readCount,
-      thumbnail,
-      ...props
-    },
-    ref,
-  ) => {
+  ({ isAuthenticated, category, name, pdfUrl, readCount, ...props }, ref) => {
+    const images: CategoryType = {
+      Language: "/language.svg",
+      Mathematics: "/math.svg",
+      Science: "/science.svg",
+      History: "/history.png",
+      "Art & commercials": "/art.png",
+    };
+    const imageUrl = images[category] ?? "";
     const { login } = usePrivy();
 
     return (
@@ -52,7 +46,7 @@ const BookCard = forwardRef<HTMLDivElement, BookCardProps>(
           <CardContent className="flex h-full flex-col gap-[10px] px-[10px] pb-[25px] pt-[10px] max-sm:px-[7px] max-sm:pt-[7px]">
             <Image
               alt={name}
-              src={"/frog-image.png"}
+              src={imageUrl}
               width={379}
               height={366}
               className="w-full rounded-[10px]"
@@ -62,7 +56,7 @@ const BookCard = forwardRef<HTMLDivElement, BookCardProps>(
               <span className="text-md text-[#CBC4C4] max-sm:text-xsm">
                 {category}
               </span>
-              <span className="text-lg max-sm:text-base">{`Read by ${readCount} people`}</span>
+              {/* <span className="text-lg max-sm:text-base">{`Read by ${readCount} people`}</span> */}
             </div>
           </CardContent>
         </Card>
