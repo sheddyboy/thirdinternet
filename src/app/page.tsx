@@ -331,19 +331,13 @@ export default function Home() {
         />
         <span>Bringing the younger next generation onchain</span>
         <div className="mx-auto flex items-center gap-[36px]">
-          <Image src="/facebook-1.svg" alt="" width={40} height={40} />
-          <Image src="/twitter-1.svg" alt="" width={40} height={40} />
-          <Image src="/insta-1.svg" alt="" width={40} height={40} />
+          <Image src="/facebook-1.svg" alt="https://warpcast.com/thirdinternet" width={40} height={40} />
+          <Image src="/twitter-1.svg" alt="https://x.com/grammyboy_?s=21" width={40} height={40} />
+          <Image src="/insta-1.svg" alt="https://www.instagram.com/thethirdinternet?igsh=cmlwM2lvNjZ2Nmtr&utm_source=qr" width={40} height={40} />
         </div>
         <span>
-          All Rights Reserved © 2023 <strong>Thirdinternet</strong>
+          All Rights Reserved © 2024 <strong>Thirdinternet</strong>
         </span>
-        <div className="mx-auto flex items-center">
-          <span className="text-lg font-bold">Contact us </span>
-          <a href="mailto:support@thirdinternet.com">
-            support@thirdinternet.com
-          </a>
-        </div>
       </motion.footer>
     </main>
   );
